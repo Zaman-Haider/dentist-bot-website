@@ -1,18 +1,17 @@
-# Dentist Bot Website
+# FrontDesk AI
 
-Product website for **Dentist Bot** — an AI receptionist for single-location dental practices. It answers phone calls, SMS text messages and WhatsApp messages 24/7 and books patients straight into the practice calendar.
+Product website for **FrontDesk AI** — an AI call & message receptionist for local businesses: dental practices, home services (HVAC, plumbing, electrical), restaurants, and more. It answers phone calls and messages 24/7, books appointments straight into the business calendar, and sends the owner a summary of every conversation.
 
 ## What is on the page
 
-- 24/7 call + message answering and booking
-- Example patient conversations (booking, insurance check, nighttime toothache, rescheduling)
-- How it works, full feature list, insurance outcomes, emergency triage
-- 15-minute live demo request (email syedzamanhaider8@gmail.com)
+- 24/7 voice + messaging answering and booking for every industry
+- Live dental demo line — call +1 (860) 474-8085 and hear the receptionist answer
+- Auto-playing sample conversations (dental phone call, home-services messages)
+- Narrated video walkthrough and a missed-call loss calculator
+- Industry sections: dental, HVAC & home services, restaurants, and more
+- Pricing: one-time setup $1,280; Starter $497/mo, Pro $797/mo, Scale $1,497/mo
+- Book a live demo by email: syedzamanhaider8@gmail.com
 
 ## Deploy
 
-Static site — a single `index.html` (assets inlined). Deploy on Vercel by importing this repository, or drag the folder into Vercel. No build step needed.
-
-## Contact
-
-syedzamanhaider8@gmail.com
+Static single-page site (`index.html`, all assets inlined). Import this repo in Vercel with no build step, or open `index.html` directly.
