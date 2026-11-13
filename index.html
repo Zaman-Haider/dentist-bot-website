@@ -979,6 +979,43 @@
         .ind-grid>.reveal:first-child,.ind-grid>.reveal:last-child,
         .ba-grid .ba-card:first-child,.ba-grid .ba-card:last-child{transform:none!important}
       }
+
+      /* ================================================================
+         HEADER FIX — breathing room, icon toggle, earlier hamburger
+         ================================================================ */
+      /* one non-wrapping row: logo · links · actions, evenly spaced,
+         everything vertically centred on the same line */
+      .nav-in{gap:36px;padding-top:15px;padding-bottom:15px}
+      .brand{flex:none}
+      .nav-links{flex-wrap:nowrap;gap:30px}
+      .nav-links a{white-space:nowrap;padding:8px 2px}
+      /* actions (toggle + CTA) grouped apart from the plain links,
+         split by a hairline so the right side stops feeling crowded */
+      .nav-actions{display:flex;align-items:center;gap:14px;padding-left:26px;border-left:1px solid var(--line)}
+      /* theme toggle: compact circular icon button instead of a wide pill */
+      .theme-toggle{
+        width:44px;height:44px;min-height:44px;padding:0;border-radius:50%;
+        justify-content:center;gap:0;flex:none;
+      }
+      .theme-toggle .lbl-dark,.theme-toggle .lbl-light{display:none!important}
+      .theme-toggle svg{width:19px;height:19px}
+      .theme-toggle:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+      .nav-actions .btn{white-space:nowrap;padding:11px 22px}
+
+      /* medium widths: tighten the gaps before anything starts to squeeze */
+      @media(max-width:1120px){
+        .nav-in{gap:26px}
+        .nav-links{gap:20px}
+        .nav-actions{padding-left:20px;gap:12px}
+      }
+      /* drop to the hamburger earlier rather than crowding the bar */
+      @media(max-width:1020px){
+        .nav-links a:not(.btn){display:none}
+        .hamburger{display:inline-flex}
+        .nav-in{gap:14px}
+        .nav-links{gap:12px}
+        .nav-actions{border-left:0;padding-left:0}
+      }
     </style>
   </head>
   <body>
@@ -998,12 +1035,14 @@
           <a href="#calculator">Loss calculator</a>
           <a href="#industries">Industries</a>
           <a href="#pricing">Pricing</a>
-          <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch between light and dark mode">
-            <svg class="ic-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 13.2A8.2 8.2 0 0 1 10.8 4 8.5 8.5 0 1 0 20 13.2Z" fill="#17684C"/></svg>
-            <svg class="ic-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.4" fill="#E5A94E"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19" stroke="#E5A94E" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="lbl-dark">Dark</span><span class="lbl-light">Light</span>
-          </button>
-          <a class="btn btn-solid btn-small" href="mailto:syedzamanhaider8@gmail.com?subject=Live%20demo%20—%20AI%20receptionist&amp;body=Hi%2C%20I%27d%20like%20a%2015-minute%20live%20demo.%0A%0AMy%20business%3A%20%0AIndustry%3A%20%0ABest%20time%20to%20call%3A%20">Book a live demo</a>
+          <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch between light and dark mode" title="Toggle dark / light mode">
+              <svg class="ic-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 13.2A8.2 8.2 0 0 1 10.8 4 8.5 8.5 0 1 0 20 13.2Z" fill="#17684C"/></svg>
+              <svg class="ic-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.4" fill="#E5A94E"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19" stroke="#E5A94E" stroke-width="2" stroke-linecap="round"/></svg>
+              <span class="lbl-dark">Dark</span><span class="lbl-light">Light</span>
+            </button>
+            <a class="btn btn-solid btn-small" href="mailto:syedzamanhaider8@gmail.com?subject=Live%20demo%20—%20AI%20receptionist&amp;body=Hi%2C%20I%27d%20like%20a%2015-minute%20live%20demo.%0A%0AMy%20business%3A%20%0AIndustry%3A%20%0ABest%20time%20to%20call%3A%20">Book a live demo</a>
+          </div>
         </nav>
         <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
           <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
